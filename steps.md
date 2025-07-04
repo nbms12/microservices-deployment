@@ -8,6 +8,7 @@ Project AIM: Microservices CI/CD deployment ( 11 Microservices ) inside EKS clus
 
 3.  install awsci, eksctl , kubectl
 
+jenkins pluggins required : docker , pipeline view, kubernetes , k8 cli , Withk8credential 
    
 4.  create eks cluter
 
