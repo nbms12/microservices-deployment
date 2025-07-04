@@ -8,7 +8,14 @@ aim: microservices deployment ( 11 services ) inside EKS clusters wit 3 nodes
 
 3.  install awsci, eksctl , kubectl
 
+   
 4.  create eks cluter
+
+5.  install jenkins , docker
+
+6.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
+
+7.  
 
 microservices 
 
