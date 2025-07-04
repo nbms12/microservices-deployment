@@ -104,6 +104,28 @@ rules:
 ```
 kubectl apply-f myrole.yml
 ```
+bind tis role to serviceaccount created 
+
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: app-rolebinding
+  namespace: webapps 
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: app-role 
+subjects:
+- namespace: webapps 
+  kind: ServiceAccount
+  name: jenkins
+
+```
+```
+kubectl apply -f bindrole.yml
+```
+
 
 8.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
 
