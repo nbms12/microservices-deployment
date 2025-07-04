@@ -43,9 +43,71 @@ eksctl create nodegroup --cluster=EKS-1 \
 ```
 5.  install jenkins , docker
 
-6.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
+   
+7.  Create Service Account, Role & Assign that role, And create a secret for Service Account and geenrate a Token
 
-7.  
+
+Creating Service Account
+```
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins
+  namespace: webapps
+```
+
+```
+kubectl apply -f svc.yml
+```
+
+Create Role
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: app-role
+  namespace: webapps
+rules:
+  - apiGroups:
+        - ""
+        - apps
+        - autoscaling
+        - batch
+        - extensions
+        - policy
+        - rbac.authorization.k8s.io
+    resources:
+      - pods
+      - componentstatuses
+      - configmaps
+      - daemonsets
+      - deployments
+      - events
+      - endpoints
+      - horizontalpodautoscalers
+      - ingress
+      - jobs
+      - limitranges
+      - namespaces
+      - nodes
+      - pods
+      - persistentvolumes
+      - persistentvolumeclaims
+      - resourcequotas
+      - replicasets
+      - replicationcontrollers
+      - serviceaccounts
+      - services
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+```
+```
+kubectl apply-f myrole.yml
+```
+
+8.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
+
+9.  
 
 microservices 
 
