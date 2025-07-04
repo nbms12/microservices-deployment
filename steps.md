@@ -126,6 +126,20 @@ subjects:
 kubectl apply -f bindrole.yml
 ```
 
+create a secret for same serviceaccount ( jenkins ) 
+```
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/service-account-token
+metadata:
+  name: mysecretname
+  annotations:
+    kubernetes.io/service-account.name: jenkins
+
+```
+```
+kubrctl apply -f mysec.yml
+```
 
 8.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
 
