@@ -46,7 +46,12 @@ eksctl create nodegroup --cluster=EKS-1 \
    
 7.  Create Service Account, Role & Assign that role, And create a secret for Service Account and geenrate a Token
 
+create namespace webapps 
 
+```
+kubectl create namespace -n webapps
+
+```
 Creating Service Account
 ```
 apiVersion: v1
