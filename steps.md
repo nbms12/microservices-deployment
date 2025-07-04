@@ -148,7 +148,15 @@ kubrctl apply -f mysec.yml
 
 8.  set permissions to docker socket to build images use : sudo chmod 666  /var/run/docker.sock
 
-9.  
+9.  create classic token in github main settings ( use tis as cred in jenkin , type secret text ) 
+
+10.  create a webhook inside project repo ( add :  http://15.206.160.5:8080/multibranch-webhook-trigger/invoke?token=micro-tokens ) need to replace wit jenkins url and classic token name
+
+11.  create a kubernetes token
+
+    ```
+    kubectl describe secret mysecretname -n webapps
+    ```
 
 microservices 
 
