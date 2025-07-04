@@ -1,4 +1,4 @@
-aim: microservices deployment ( 11 services ) inside EKS clusters wit 3 nodes 
+Project AIM: Microservices CI/CD deployment ( 11 Microservices ) inside EKS clusters 
 
 1. ec2 instances 
 
