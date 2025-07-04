@@ -158,13 +158,17 @@ kubrctl apply -f mysec.yml
  kubectl describe secret mysecretname -n webapps
 ```
 
-microservices 
+12. install tis pipeline and configure
+
+![image](https://github.com/user-attachments/assets/3e4473b9-c114-464e-b0c7-06ebc5b8625b)
+
+13.microservices  pipeline view using multibranch strategy 
 
 ![image](https://github.com/user-attachments/assets/e7a48a9a-806b-4174-a4e3-affe12e05717)
 
 
 
-frontend - app
+final frontend - app
 
 ![image](https://github.com/user-attachments/assets/de7d4d43-7496-4372-a878-d6f4bc466797)
 
