@@ -152,11 +152,11 @@ kubrctl apply -f mysec.yml
 
 10.  create a webhook inside project repo ( add :  http://15.206.160.5:8080/multibranch-webhook-trigger/invoke?token=micro-tokens ) need to replace wit jenkins url and classic token name
 
-11.  create a kubernetes token
+11.  create a kubernetes token and  store into jenkins cred ( k8-token ) 
 
-    ```
-    kubectl describe secret mysecretname -n webapps
-    ```
+```
+ kubectl describe secret mysecretname -n webapps
+```
 
 microservices 
 
