@@ -1,4 +1,10 @@
-Project AIM: Microservices CI/CD deployment ( 11 Microservices ) inside EKS clusters 
+Project AIM: E-com Microservices app  CI/CD deployment ( 11 Microservices ) inside EKS clusters 
+
+
+Architecture diagram 
+
+![image](https://github.com/user-attachments/assets/71e9c21a-a458-436e-b478-15c88b03b0cf)
+
 
 1. ec2 instances 
 
